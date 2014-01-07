@@ -1,0 +1,78 @@
+@import url(http://fonts.googleapis.com/css?family=Jura&subset=latin,cyrillic);
+
+@import 'colors';
+@import 'mixins';
+
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include background-radial-gradient($white, $gray, darken($gray, 40%));
+
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Jura', sans-serif;
+
+  h1 {
+    font-size: 36px;
+    text-shadow: 4px 4px 2px $gray;
+  }
+
+  h2 {
+    font-size: 28px;
+    text-shadow: 2px 2px 1px $gray;
+  }
+
+  canvas.spinner {
+    $size: 200px;
+
+    height: $size;
+    width: $size;
+  }
+
+
+  .highlight {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px 10px;
+
+    background: rgba(darken($white, 5%), 0.8);
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba($black, 0.8);
+  }
+
+
+  #container {
+    $width: 900px;
+    $height: 600px;
+
+    margin: 0 auto;
+    width: $width;
+  
+    #holder {
+      display: table-cell;
+      height: $height;
+      width: $width;
+
+      text-align: center;
+      vertical-align: middle;
+
+      .waiter {
+        display: inline-block;
+        height: $height - 150px;
+        width: 100%;
+
+        background-color: white;
+        border-radius: 10px;
+        border: 1px solid rgba($black, 0.3);
+        box-shadow: 0 5px 15px rgba($black, 0.9);
+      }
+    }
+  }
+}
