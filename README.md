@@ -1,5 +1,5 @@
-Sihamsa : Sinatra-based HAML и SCSS шаблон
-===========================================
+Sihamsa : Sinatra-based HAML и SCSS шаблон + jQuery + Twitter Bootstrap 2
+=========================================================================
 
 
 
@@ -108,6 +108,15 @@ $ rackup
 
 Все статические файлы находятся в папке `public`. В браузере они работают по простой схеме : в пути к файлу __отбрасывается__ `public`. Например, файл `public/images/logo.png` доступен по ссылке [http://localhost:4567/images/logo.png](http://localhost:4567/images/logo.png), а файл `public/js/app.js` -- по ссылке [http://localhost:4567/js/app.js](http://localhost:4567/js/app.js). 
 
+
+
+
+### Как подключить сторонние CSS/JS библиотеки
+
+Любые файлы в папке `public` являются доступными через браузер, поэтому для подключения сторонних библиотек нужно сделать вот что : 
+
+1. Скопировать библиотеку в папку `public/vendor`
+2. Подключить файлы библиотеки в HAML-код в нужном месте (для глобального подключения -- шаблон `haml/layout.haml`; для локального -- любая другая HAML-страница). При подключении в пути к файлу НЕ нужно писать `public` (например, файл `public/vendor/bootstrap/css/bootstrap.css` подключается с помощью такого HAML-кода : `%link(rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.css")`)
 
 
 
