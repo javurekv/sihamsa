@@ -8,3 +8,68 @@
   background: radial-gradient(ellipse at center, $from_color 0%, $through_color 50%, $to_color 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$from_color}', endColorstr='#{$to_color}',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
+@mixin gradient($deg, $from, $to){
+ 
+  /* Firefox 3.6+ */
+  background-image: -moz-linear-gradient($deg,$from, $to);
+ 
+  /* Safari 4+, Chrome 1+ */
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
+ 
+  /* Safari 5.1+, Chrome 10+ */
+  background-image: -webkit-linear-gradient($deg, $from, $to);
+ 
+  /* Opera 11.10+ */
+  background-image: -o-linear-gradient($deg, $from, $to);
+  background-image: -ms-linear-gradient($deg, $from, $to);
+  background-image: linear-gradient($deg, $from, $to);
+}
+@mixin rotate($deg){
+ 
+  /* Firefox 3.6+ */
+  -moz-transform:rotate($deg);
+ 
+  /* Safari 4+, Chrome 1+ */
+  -webkit-transform:rotate($deg);
+ 
+  /* IE */
+  -ms-transform:rotate($deg);
+ 
+  /* Opera 11.10+ */
+  -o-transform:rotate($deg);
+}
+@mixin gradient-radial($position1, $position2, $color1, $color2, $position3, $position4, $color3, $color4){
+ 
+  /* Firefox 3.6+ */
+  // -webkit-radial-gradient(0 -2px, 111px 6px, #000 0%, transparent 100%),-webkit-radial-gradient(-3px 0,  13px 330px, #000 0%, transparent 100%);
+  background-image: -moz-radial-gradient($position1, $position2, $color1, $color2), -moz-radial-gradient($position3, $position4, $color3, $color4);
+ 
+  /* Safari 4+, Chrome 1+ */
+  background-image: -ms-radial-gradient($position1, $position2, $color1, $color2),-ms-radial-gradient($position3, $position4, $color3, $color4);
+ 
+  /* Safari 5.1+, Chrome 10+ */
+  background-image: -webkit-radial-gradient($position1, $position2, $color1, $color2),-webkit-radial-gradient($position3, $position4, $color3, $color4);
+ 
+  /* Opera 11.10+ */
+  background-image: -o-radial-gradient($position1, $position2, $color1, $color2),-o-radial-gradient($position3, $position4, $color3, $color4);
+   background-image: radial-gradient($position1, $position2, $color1, $color2),radial-gradient($position3, $position4, $color3, $color4);
+
+}
+.slider-right{
+   @include gradient-radial(0 -2px, 111px 6px, #000 0%, transparent 100%, -3px 0,  13px 330px, #000 0%, transparent 100%);
+}
+
+.hr2{
+   @include rotate(90deg);
+}
+
+.hr1{
+  @include gradient(90deg,transparent 28px, rgba(255,255,255,0.3) 72%);
+}
+.hr2{
+  @include gradient(90deg,rgba(255,255,255,0.3) 72%, transparent 28%);
+}
+.star{
+  @include gradient(159deg, transparent 23%, #ff003c 23%);
+}
+

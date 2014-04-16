@@ -1,0 +1,258 @@
+%link(rel="stylesheet" href="/scss/pages/level.css")
+.container
+  %header#header
+    .left-header
+      .city
+        %img.btn.dropdown-toggle{alt: "", "data-toggle" => "dropdown", src: "../images/city.png"}/
+        %ul#city_name.dropdown-menu{role: "menu"}
+          %li
+            %a{href: "#", tabindex: "-1"} Вінниця
+          %li
+            %a{href: "#", tabindex: "-1"} Донецьк
+          %li
+            %a{href: "#", tabindex: "-1"} Житомир
+          %li
+            %a{href: "#", tabindex: "-1"} Київ
+          %li
+            %a{href: "#", tabindex: "-1"} Жмеренка
+        %p вінниця
+    #logo
+      %hr.hr1/
+      %hr.hr2/
+      %p 3
+    .right-header
+      .user
+        %img{alt: "", src: "../images/user.png"}/
+        .btn.dropdown-toggle{"data-toggle" => "dropdown"}
+          ▼
+        %ul.dropdown-menu{role: "menu"}
+          %li
+            %a{href: "#", tabindex: "-1"}
+              Вхід
+          %li
+            %a{href: "#", tabindex: "-1"}
+              Кабінет
+        %p.btn
+          Вхід
+        %p.btn
+          Кабінет
+      .mobile
+        %ul
+          %li
+            %p.tiket
+              Квитки
+              %br>/
+              в твоєму телефоні
+          %li
+            %a{href: "#"}
+              %img#apple{alt: "", src: "../images/apple.png"}/
+          %li
+            %a{href: ""}
+              %img{alt: "", src: "../images/android.png"}/
+    .slider-right
+  .time
+    %p
+      до найближчого сеансу
+      %br>/
+      залишилось
+    %h2
+      01:45
+  .title
+    %h1
+      Гравітація
+    %h2
+      Gravity
+  .data
+    %h2
+      20.10 ‐ 25.10.2013
+  .navbar
+    %nav
+      %ul
+        %li
+          %a{href: ""}
+            %p Фільми
+        %li
+          %a{href: ""}
+            %p Розклад
+        %li
+          %a{href: ""}
+            %p Реклама&nbsp;&nbsp;на сайті
+        %li
+          %a{href: ""}
+            %p контакти
+  #myCarousel.carousel.slide
+    %ol.carousel-indicators
+      %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
+      %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
+      %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
+      %li{"data-slide-to" => "3", "data-target" => "#myCarousel"}
+    .carousel-inner
+      .item.active
+      .item
+      .item
+      .item
+  .telefon
+    .telefon-ins
+      %h4
+        дізнавайся
+        %br/
+        про найновіше
+      %h3
+        першим!
+      %p
+        Введи свій номер
+        %br>/
+        та отримуй СМС сповіщення
+        %br>/
+        про новинки в кіноіндустрії
+      .telefon-ins-input
+        .telefon-input
+          .three
+            .after
+            .after
+            .after
+          .three
+            .after
+            .after
+            .after
+          .two
+            .after
+            .after
+          .two
+            .after
+            .after
+          %form{action: ""}
+            .three
+              %input{maxlength: "1", type: "text"}/
+              %input{maxlength: "1", type: "text"}/
+              %input{maxlength: "1", type: "text"}/
+            .three
+              %input{maxlength: "1", type: "text"}/
+              %input{maxlength: "1", type: "text"}/
+              %input{maxlength: "1", type: "text"}/
+            .two
+              %input{maxlength: "1", type: "text"}/
+              %input{maxlength: "1", type: "text"}/
+            .two
+              %input{maxlength: "1", type: "text"}/
+              %input{maxlength: "1", type: "text"}/
+  .main-back
+    %p
+      Сьогодні 21 ЖОВТНЯ
+  .calendar
+    %table.table-calendar
+      %tr.main
+        %td Понеділок
+        %td.main-active Вівторок
+        %td Середа
+        %td Четвер
+        %td Пятниця
+        %td Субота
+        %td Неділя
+      %tr.calendar-tr.calendar-tr-1
+        %td.calendar-none.table-opacity 30
+        %td.table-opacity-2 1
+        %td 2
+        %td 3
+        %td 4
+        %td.table-opacity-2 5
+        %td.table-opacity 6
+      %tr.calendar-tr.calendar-tr-2
+        %td.table-opacity 7
+        %td.table-opacity-2 8
+        %td 9
+        %td 10
+        %td 11
+        %td.table-opacity-2 12
+        %td.table-opacity 13
+      %tr.calendar-tr.calendar-tr-3
+        %td.table-opacity 14
+        %td.table-opacity-2 15
+        %td 16
+        %td 17
+        %td 18
+        %td.table-opacity-2 19
+        %td.table-opacity.active-td 20
+      %tr.calendar-tr.calendar-tr-4
+        %td.table-opacity.active-td 21
+        %td.table-opacity-2.active-td.today 22
+        %td.active-td 23
+        %td.active-td 24
+        %td.active-td 25
+        %td.table-opacity-2 26
+        %td.table-opacity 27
+      %tr.calendar-tr.calendar-tr-5
+        %td.table-opacity 28
+        %td 29
+        %td 30
+        %td.calendar-none 1
+        %td.calendar-none 2
+        %td.calendar-none 3
+        %td.calendar-none.table-opacity 4
+.content
+  .baner
+  .prokat.tabbable
+    .tab-content
+      .nav.nav-tabs.link
+        %ul
+          %li
+            %a{"data-toggle" => "tab", href: "#tab2"}
+              зараз в прокаті
+            &nbsp;&nbsp;|&nbsp;
+          %li.active
+            %a{"data-toggle" => "tab", href: "#tab1"}
+              незабаром на екранах
+      #tab1.tab-pane.active.film
+        .film-ins.film-ins-1
+          .star.star-1
+            %img{alt: "", src: "../images/stalin_star.png"}/
+            %h3
+              Сталінград
+        .film-ins.film-ins-2
+          .star.star-2
+            %img{alt: "", src: "../images/house_star.png"}/
+            %h3
+              Будинок
+              %br/
+              забутих речей
+        .film-ins.film-ins-3
+          .star.star-3
+            %img{alt: "", src: "../images/stalin_star.png"}/
+            %h3
+              План втечі
+        .film-ins.film-ins-4
+          .star.star-4
+            %img{alt: "", src: "../images/gravit_star.png"}/
+            %h3
+              Гравітація
+        .film-ins.film-ins-5
+          .star.star-5
+            %img{alt: "", src: "../images/house_star.png"}/
+            %h3
+              Ромео
+              %br/
+              і джульєтта
+      #tab2.tab-pane.film
+        .film-ins.film-ins-1
+        .film-ins.film-ins-2
+        .film-ins.film-ins-3
+        .film-ins.film-ins-4
+        .film-ins.film-ins-5
+  .footer
+    %img#line{alt: "", src: "../images/line.png"}/
+    .soc
+      .soc-in.vk
+      .soc-in.fac
+      .soc-in.twit
+      %p
+        © Мережа кінотеатрів «3», 2013
+    .right-footer
+      %h1
+        (0432) 508 508
+      .every-day
+        %p
+          Щодня
+        %h4
+          9:00&nbsp;–&nbsp;22:00
+      %h3
+        Всі дзвінки по Україні зі стаціонарних телефонів безкоштовні
