@@ -136,6 +136,7 @@
 						.two
 							%input{maxlength: "1", type: "text"}/
 							%input{maxlength: "1", type: "text"}/
+						%input.down{type:"submit"}
 	.main-back
 		%p
 			Сьогодні 21 ЖОВТНЯ
@@ -205,7 +206,7 @@
 			#tab1.tab-pane.active.film
 				.film-ins.film-ins-1
 					.star
-						.star_ins
+						.star-ins
 							.star-ind.star-on
 							.star-ind.star-on
 							.star-ind.star-on
@@ -216,7 +217,7 @@
 							Сталінград
 				.film-ins.film-ins-2
 					.star
-						.star_ins
+						.star-ins
 							.star-ind.star-on
 							.star-ind.star-off
 							.star-ind.star-off
@@ -229,7 +230,7 @@
 							забутих речей
 				.film-ins.film-ins-3
 					.star
-						.star_ins
+						.star-ins
 							.star-ind.star-on
 							.star-ind.star-on
 							.star-ind.star-on
@@ -240,7 +241,7 @@
 							План втечі
 				.film-ins.film-ins-4
 					.star
-						.star_ins
+						.star-ins
 							.star-ind.star-on
 							.star-ind.star-on
 							.star-ind.star-on
@@ -251,7 +252,7 @@
 							Гравітація
 				.film-ins.film-ins-5
 					.star
-						.star_ins
+						.star-ins
 							.star-ind.star-on
 							.star-ind.star-off
 							.star-ind.star-off
@@ -270,10 +271,10 @@
 				.film-ins.film-ins-5
 	.footer
 		%img#line{alt: "", src: "../images/line.png"}/
-		.soc
-			.soc-in.vk
-			.soc-in.fac
-			.soc-in.twit
+		.soc			
+			%a.soc-in.vk{href: "#"}
+			%a.soc-in.fac{href: "##"} 
+			%a.soc-in.twit{href: "###"}  
 			%p
 				&#169; Мережа кінотеатрів &#171;3&#187;, 2013
 		.right-footer
