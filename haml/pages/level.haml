@@ -1,5 +1,24 @@
 %link(rel="stylesheet" href="/scss/pages/level.css")
 .container
+	#modal.modal.hide
+		.modal-header
+			.tab-content
+			.nav.nav-tabs.link
+				%ul
+					%li.active
+						%a{"data-toggle" => "tab", href: "#tab2"}
+							Вхід
+						&nbsp;&nbsp;|&nbsp;
+					%li
+						%a{"data-toggle" => "tab", href: "#tab1"}
+							Реєстрація
+			#tab1.tab-pane.active
+				.socreg Реєстрація через мережу
+			#tab2.tab-pane
+			
+		.modal-body
+			
+				
 	%header#header
 		.left-header
 			.city
@@ -22,7 +41,9 @@
 			%p 3
 		.right-header
 			.user
-				%img{alt: "", src: "../images/user.png"}/
+				%a.btn{"data-toggle" => "modal", href: "#modal", role: "button"}
+					%img{alt: "", src: "../images/user.png"}/
+					
 				.btn.dropdown-toggle{"data-toggle" => "dropdown"}
 					&#9660;
 				%ul.dropdown-menu{role: "menu"}

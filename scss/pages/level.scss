@@ -1223,6 +1223,11 @@ body {
   font-size: 14px;  
   line-height: 52px;
   text-transform: uppercase;
+ 
+  a  {
+    background: none !important;
+    outline: none !important;
+  }
 }
 
 .city {
@@ -2303,4 +2308,16 @@ table {
 #line {
   position: absolute;
   left: 0;
+}
+#modal {
+  position: absolute;
+  top:68px;
+  width: 410px;
+  margin-left: 68px;
+}
+.modal-backdrop {
+  opacity: 0;
+}
+.modal-header {
+  border-bottom: none;
 }
